@@ -1,0 +1,105 @@
+#__nuxt, #__layout {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,body {
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/*后台登录*/
+.login-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 400px;
+  width: 500px;
+  margin: -200px 0 0 -250px;
+  background: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px 40px;
+}
+.login-box .logo {
+  position: relative;
+}
+.login-box .logo:before {
+  content: '';
+  position: absolute;
+  width: 18%;
+  height: 1px;
+  background: #7ca9f1;
+  left: -10px;
+  top: 50%;
+}
+.login-box .logo:after {
+  content: '';
+  position: absolute;
+  width: 18%;
+  height: 1px;
+  background: #7ca9f1;
+  right: -10px;
+  top: 50%;
+}
+.login-box .title {
+  font-size: 28px;
+  line-height: 50px;
+  margin-bottom: 30px;
+  color: #2e75fa;
+  font-weight: bold;
+}
+.login-box .form {
+}
+.login-box .form .form-item{
+  padding-bottom: 20px;
+}
+.login-box .button {
+  background: #3e75fa;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.login-box .button:hover {
+  background: #5c94fb;
+}
+
+.login-box .el-input__inner {
+  border-radius: 20px;
+}
+
+
+/*后台管理*/
+.admin-page {
+  padding: 10px 20px;
+}
+.admin-page .top {
+  line-height: 30px;
+}
+.admin-page .top .title {
+  border-left: 5px solid #3393f5;
+  padding-left: 10px;
+  font-size: 18px;
+  margin-right: 20px;
+}
