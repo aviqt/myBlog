@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
+  <div class="container"> 
 		<div class="header">
 			<admin-header />
 		</div>
 		<div class="sideNav">
 			<side-nav />
 		</div>
-		<div class="main">
+		<div class="main"  v-loading='$store.state.admin.loading'>
 			<div class="main-inner">
 				<nuxt/>
 			</div>
@@ -32,7 +32,7 @@ export default {
   computed: {},
   head() {
     return {
-      title: '宁大学术论文后台管理系统'
+      title: '实验考试后台管理系统'
     }
   }
 }
@@ -49,14 +49,15 @@ export default {
 	position: absolute;
 	height: 64px;
 	top: 0;
-	left: 0;
+	left: 200px;
 	right: 0;
+  background: linear-gradient(165deg, #636063 75%, #323741 75%);
 	background: #323741;
 }
 .sideNav{
 	position: absolute;
 	width: 200px;
-	top: 64px;
+	top: 0;
 	left: 0;
 	bottom: 0;
 	background: #323741;

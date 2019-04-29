@@ -1,0 +1,336 @@
+html{
+  font-size: 20px;
+}
+body {
+  background: #ececec;
+  position: relative;
+  overflow: hidden;
+}
+#__layout > div ,#__layout > div > div{
+  position: relative;
+  height: 100%;
+}
+.warpper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;  background: rgba(41,77,255,0.7);
+  z-index: 5;
+}
+.warpper span {
+  position: absolute;
+  display: block;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  width: 100%;
+  line-height: 6rem;
+  top: 50%;
+  left: 0;
+  margin-top: -3rem;
+}
+/***登录***/
+.pad-login-box {
+  margin: 0 auto;
+  width: 28rem;
+  text-align: center;
+  position: fixed;
+  height: 22rem;
+  left: 50%;
+  top: 50%;
+  margin: -12rem 0 0 -14rem;
+}
+.pad-login-box .title{
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.pad-login-box .select-role {
+  margin-top: 3rem;
+}
+.pad-login-box .select-role div{
+  background: white;
+  color: #4177ff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  line-height: 3rem;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 2rem;
+}
+.pad-login-box .select-role div:active{
+  background: #eeeeee;
+}
+.pad-login-inner {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.pad-login-inner .role-title{
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold;
+  position: relative;
+}
+.pad-login-inner .role-title:before {
+  content: '';
+  position: absolute;
+  width: 10%;
+  height: 0.1rem;
+  background: white;
+  left: 1rem;
+  top: 50%;
+}
+.pad-login-inner .role-title:after {
+  content: '';
+  position: absolute;
+  width: 10%;
+  height: 0.1rem;
+  background: white;
+  right: 1rem;
+  top: 50%;
+}
+.pad-login-form{
+  background: white;
+  border-radius: 0.3rem;
+  padding: 1rem 2rem;
+  padding-top: 1.2rem;
+  margin-top: 1.5rem;
+}
+.pad-login-form .form-item{
+  padding-bottom: 1rem;
+  padding-left: 2.5rem;
+  position: relative;
+}
+.pad-login-form .form-item .iconfont {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.1rem;
+  font-size: 1.5rem;
+  color: #4177ff;
+}
+.pad-login-form .el-input__inner {
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  border-bottom: #a7c0fe 0.1rem solid;
+  color: #4177ff;
+  font-size: 1rem;
+  height: 2rem;
+}
+.pad-login-form .button{
+  background: #3e75fa;
+  text-align: center;
+  line-height: 2rem;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+}
+.pad-login-form .button:hover {
+  background: #5c94fb;
+}
+
+.exam-box {
+  background: white; 
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+.exam-box .lab-info {
+  overflow: hidden;
+  line-height: 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.exam-box .table-info {
+  margin-top: 1.2rem;
+  padding: 0 0.5rem;
+}
+.exam-box .table-info span{
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  text-align: center;
+  line-height: 2.6rem;
+  font-weight: bold;
+  display:block;
+}
+.examinee-info {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 0;
+  display: inline-block;
+  text-align: left;
+}
+.examinee-info > div{
+  display: table-cell;
+  height: 16rem;
+  vertical-align: middle;
+}
+.examinee-info img{
+  float: left;
+  height: 16rem;
+  margin-right: 2rem;
+  display: block;
+}
+.examinee-info span{
+  display: block;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 4rem;
+}
+.pad-testing .exam-box .lab-info ,.pad-testing .exam-box .table-info {
+  display: none;
+}
+.pad-testing .examinee-info > div {
+  height: 6rem;
+}
+.pad-testing .examinee-info  img {
+  width: 4.5rem;
+  height: 6rem;
+  margin-right: 1rem;
+}
+.pad-testing .examinee-info  span {
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}
+.before-exam span{
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 5rem;
+}
+.logout-btn {
+  position: absolute;
+  top: 0;
+  right: 2.2rem;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #4177ff;
+  padding: 0 0.5rem;
+}
+.logout-btn:active{
+  color: #3066ee;
+  background: #efefef;
+}
+.lamp{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 1rem;
+  width: 1rem;
+  background: #f56c6c;
+  border-radius: 50%;
+  box-shadow: 0px -1px 5px inset white;
+}
+.green-light{
+  background: #67c23a;
+}
+
+
+
+/**/
+.pad-top {
+  display: none;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  background: #4177ff;
+}
+.pad-top span{
+  color: white;
+  font-size: 0.9rem;
+  display: table-cell;
+  text-align: center;
+}
+.pad-title{
+  line-height: 3rem;
+  background: white;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 0 0.3rem gray;
+  z-index: 5;
+  position: relative;
+}
+.pad-main {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.pad-testing .pad-top {
+  display: table;
+  width: 100%;
+}
+.pad-testing .pad-main {
+  top: 5.5rem;
+}
+
+.pad-operation-menu {
+  text-align: center;
+  margin: 1.5rem 0 1rem;
+}
+.pad-operation-menu .pad-button {
+  display: inline-block;
+  background: #4177ff;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 3rem;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+}
+.pad-operation-menu .pad-button:active {
+  opacity: 0.8;
+}
+/**/
+@media screen and (min-width: 1920px) {
+  html{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1920px){
+  html{
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 1600px){
+  html{
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1440px){
+  html{
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1280px){
+  html{
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1024px){
+  html{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px){
+  html{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px){
+  html{
+    font-size: 14px;
+  }
+}

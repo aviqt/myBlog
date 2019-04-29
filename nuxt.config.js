@@ -37,6 +37,7 @@ module.exports = {
   */
   plugins: [
     '@/plugins/element-ui',
+    '@/plugins/vue-baidu-map',
     '@/plugins/vue-awesome-swiper',
   ],
 
@@ -46,13 +47,24 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-		'@nuxtjs/proxy'
+   ['@nuxtjs/proxy', { pathRewrite: { '^/tapi' : '/api', '^/api2' : ''  } }],
   ],
   proxy: [
-    ['/edu', {
+    ['/tapi', {
+      target: 'http://118.31.60.159'
+    }],
+    ['/api', {
+      //target: 'https://t.experiment.train.joyread.com.cn'
+      target: 'http://192.168.100.193'
+    }],
+  ],
+  /*
+  proxy: [
+    [ '/edu', {
       target: 'https://test.api.86edu.net',
     }]
   ],
+  */
   /*
   ** Axios module configuration
   */

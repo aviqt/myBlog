@@ -1,7 +1,7 @@
 {
-  "name": "ndxs",
+  "name": "LIMS",
   "version": "1.0.0",
-  "description": "ndxs",
+  "description": "LIMS",
   "author": "wangxiaolong",
   "private": true,
   "scripts": {
@@ -14,8 +14,12 @@
     "@nuxtjs/axios": "^5.0.0",
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.6",
+    "jquery": "^3.3.1",
     "nuxt": "^2.0.0",
-    "vue-awesome-swiper": "^3.1.3"
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-baidu-map": "^0.21.14",
+    "vue-quill-editor": "^3.0.6",
+    "wangeditor": "^3.1.1"
   },
   "devDependencies": {
     "@nuxtjs/proxy": "^1.3.1",

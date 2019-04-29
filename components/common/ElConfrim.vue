@@ -1,8 +1,8 @@
 <template>
-    <el-dialog :title="confrimInfo.title" :visible.sync="confrimInfo.show" width="300px">
+    <el-dialog :title="confrimInfo.title" :visible.sync="confrimInfo.show" width="300px" :before-close="handleClose">
       <div class='content'>{{confrimInfo.text}}</div>
       <span slot="footer" class="dialog-footer">
-        <el-button v-if='confrimInfo.isConfrim' @click="confrimInfo.show = false">取 消</el-button>
+        <el-button v-if='confrimInfo.isConfrim' @click="handleCancelClick">取 消</el-button>
         <el-button type="primary" @click="handleOkClick()">确 定</el-button>
       </span>
     </el-dialog>
@@ -22,6 +22,14 @@ export default {
     handleOkClick () {
       this.confrimInfo.show = false
       this.confrimInfo.handlEvent && this.confrimInfo.handlEvent()
+    },
+    handleCancelClick () {
+      this.confrimInfo.show = false
+      this.confrimInfo.handlCancleEvent && this.confrimInfo.handlCancleEvent()
+    },
+    handleClose(done) {
+      this.confrimInfo.handlCancleEvent && this.confrimInfo.handlCancleEvent()
+     done()
     }
   },
   computed: {

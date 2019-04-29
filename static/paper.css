@@ -1,0 +1,74 @@
+  
+  /*试卷*/
+  .pad-paper-view {
+  }
+  .pad-paper-view span  {
+    border-bottom: 1px solid gray;
+    min-width: 2.5rem;
+    max-width: 4rem;
+    /*padding: 0 0.4rem;*/
+    text-align: center;
+    display: inline-block;
+    outline: none;
+    color: #4177ff;
+    height: 1.8rem;
+    overflow: hidden;
+    vertical-align: bottom;
+    white-space: nowrap;
+  }
+  .pad-paper-view .long-input {
+    max-width: 15rem;
+    min-width: 9rem;
+  }
+  .pad-paper-view .layout-table{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .pad-paper-view .layout-table > tr > td{
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.8;
+    padding-bottom: 0.2rem;
+  }
+  .pad-paper-view .layout-table > tr > td:first-child{
+    width: 6rem;
+    text-align: right;
+  }
+  
+  .pad-paper-view .fill-table{
+    width: 80%;
+    margin: 0 auto;
+    border-collapse:collapse;
+    text-align: center;
+  }
+  .pad-paper-view .fill-table span{
+    border: none;
+    height: 1.1rem;
+  }
+  .pad-paper-view .fill-table > tr > td{
+    vertical-align: top;
+    padding:  0.5rem;
+    border: 1px solid gray;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    outline: none;
+    min-width: 3.5rem;
+    vertical-align: middle;
+  }
+  
+  .pad-paper-view .button {
+    display: inline-block;
+    background: #4177ff;
+    color: white;
+    font-weight: bold;
+    padding: 0 1rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  .pad-paper-view .button:active {
+    opacity: 0.8;
+  }
+  .pad-paper-view .confirmed {
+    color: #009900;
+  }

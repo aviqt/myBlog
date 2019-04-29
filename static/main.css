@@ -3,7 +3,11 @@
   height: 100%;
   width: 100%;
 }
-
+body{
+    font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "'Hiragino Sans GB", STHeiti, "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
+    text-shadow:0px 0px 1px rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+}
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -17,6 +21,7 @@ html {
 }
 html,body {
   height: 100%;
+  overflow: hidden;
 }
 *,
 *:before,
@@ -31,8 +36,8 @@ html,body {
   top: 50%;
   left: 50%;
   height: 400px;
-  width: 500px;
-  margin: -200px 0 0 -250px;
+  width: 450px;
+  margin: -200px 0 0 -225px;
   background: white;
   border-radius: 10px;
   box-sizing: border-box;
@@ -61,34 +66,126 @@ html,body {
   top: 50%;
 }
 .login-box .title {
-  font-size: 28px;
-  line-height: 50px;
-  margin-bottom: 30px;
+  font-size: 25px;
+  margin-top: 10px;
+  line-height: 30px;
   color: #2e75fa;
-  font-weight: bold;
+}
+.login-box .title img{
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.role-title{
+  font-size: 26px;
+  color: #2e75fa;
+  line-height: 40px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.role-title:before {
+  content: '';
+  position: absolute;
+  width: 15%;
+  height: 3px;
+  background: #2e75fa;
+  left: 15%;
+  top: 50%;
+}
+.role-title:after {
+  content: '';
+  position: absolute;
+  width: 15%;
+  height: 3px;
+  background: #2e75fa;
+  right: 15%;
+  top: 50%;
 }
 .login-box .form {
+  text-align: left;
 }
 .login-box .form .form-item{
-  padding-bottom: 20px;
+  padding-bottom: 15px;
+  position: relative;
+}
+.login-box .form .form-item .iconfont {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  font-size: 25px;
+  color: #cccdd6;
+  z-index: 3;
 }
 .login-box .button {
   background: #3e75fa;
   text-align: center;
   line-height: 40px;
-  border-radius: 20px;
+  border-radius: 5px;
   color: white;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .login-box .button:hover {
   background: #5c94fb;
 }
 
 .login-box .el-input__inner {
-  border-radius: 20px;
+  padding-left: 40px;
+  border-radius: 5px;
 }
-
+.top-userInfo {
+  position: absolute;
+  height: 64px;
+  line-height: 64px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 1px 10px #323741;
+  text-align: right;
+  padding-right: 30px;
+}
+.top-userInfo .button{
+  display: inline-block;
+  height: 64px;
+  width: 80px;
+  cursor: pointer;
+	text-align: center;
+}
+.top-userInfo .button:hover{
+  background: #eeeeee;
+}
+.center-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 450px;
+  width: 500px;
+  margin: -150px 0 0 -250px;
+  background: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px 40px;
+}
+._form table {
+  width: 100%;
+}
+._form td > span {
+  color:  #6198f9;
+  font-size: 14px;
+}
+._form table tr td{
+  text-align: left;
+  height: 40px;
+}
+._form table tr td:first-child{
+  text-align: right;
+  color: gray;
+  width: 100px;
+}
+._form .el-select {
+  width: 100%;
+}
 
 /*后台管理*/
 .admin-page {
@@ -102,4 +199,94 @@ html,body {
   padding-left: 10px;
   font-size: 18px;
   margin-right: 20px;
+}
+.action-bar {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
+  line-height: 30px;
+}
+.action-bar button{
+  float: right;
+  margin-left: 10px;
+}
+.action-bar > span{
+  cursor: pointer;
+  color: #4177ff;
+}
+.action-bar > span:hover{
+  color: #7CA9F1;
+}
+
+.el-table--enable-row-hover .el-table__body tr.hover-row>td {
+  background: initial;
+}
+.el-table--enable-row-hover .el-table__body tr.hover-row:hover>td {
+  background: #f5f7fa;
+}
+@keyframes boardEntry
+{
+  from {top: -200%;bottom: 204%}
+  to {8: 8%;bottom: 8%;}
+}
+
+
+/*评卷*/
+.score-total{
+  background: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  line-height: 60px;
+  border-top: 1px solid gray;
+}
+.score-total > span{
+  display: inline-block;
+  padding-left: 20px;
+  font-size: 18px;
+  color: #666;
+}
+.score-total strong{
+  color: #4177ff;
+  font-size: 22px;
+}
+.score-total .operation {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  min-width: 300px;
+  text-align: right;
+}
+.score-rule-lines {
+  background: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 60px;
+  padding: 10px;
+  overflow: auto;
+}
+.rule-line{
+}
+.rule-line strong{
+  line-height: 35px;
+  font-size: 18px;
+}
+.rule-point{
+  padding: 6px 0 6px 6px;
+  display: table;
+  width: 100%;
+}
+.rule-point > div{
+  line-height: 24px;
+  display: table-cell;
+}
+.rule-point > div .el-radio__label{
+  display: none;
+}
+.rule-point > div >span {
+  color: red;
 }
